@@ -2,8 +2,8 @@
 //  ViewController.m
 //  MSScrollViewDemo
 //
-//  Created by Shim Minseok on 13. 1. 14..
-//  Copyright (c) 2013 www.gconic.com All rights reserved.
+//  Created by Shim Minseok on 13. 5. 26..
+//  Copyright (c) 2013 Shim Minseok All rights reserved.
 //
 
 #import "ViewController.h"
@@ -17,10 +17,10 @@
 - (void)viewDidLoad
 {
     self.myScrollView = [[MSScrollView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    _myScrollView.contentSize = CGSizeMake(320*100, IS_IPHONE_5?568:480);
+    _myScrollView.contentSize = CGSizeMake(320*10, IS_IPHONE_5?568:480);
     _myScrollView.pagingEnabled = YES;
     _myScrollView.backgroundColor = [UIColor whiteColor];
-    for(int i = 0; i<100; i++)
+    for(int i = 0; i<10; i++)
     {
         UIView *view = [[UIView alloc] initWithFrame:(CGRect){320*i,0,320,IS_IPHONE_5?568:480}];
         view.backgroundColor = [UIColor colorWithRed:(arc4random()%100)/100.0f green:(arc4random()%100)/100.0f blue:(arc4random()%100)/100.0f alpha:1.0f];
@@ -38,10 +38,11 @@
     }
     
     [self.view addSubview:_myScrollView];
+    [_myScrollView setPageControl:CGPointMake(160,IS_IPHONE_5?520:430)];
     
     _myScrollView.didscroll = ^(BOOL isDecelerating, ScrollViewDirection direction, ScrollViewAction action)
     {
-        NSLog(@"_didScroll:%d, direction:%d, action:%d", isDecelerating, direction, action);
+        NSLog(@"didScroll | isDecelerating:%d, direction:%d, action:%d", isDecelerating, direction, action);
     };
     
     _myScrollView.beginDragging = ^{
