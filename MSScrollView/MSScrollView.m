@@ -3,10 +3,13 @@
 //  MSScrollView
 //
 //  Created by Shim Minseok on 13. 5. 26..
-//  Copyright (c) 2013 www.gconic.com All rights reserved.
+//  Copyright (c) 2013 Shim Minseok All rights reserved.
 //
 
 #import "MSScrollView.h"
+
+#define PAGE_CONTROL_WIDTH  38
+#define PAGE_CONTROL_HEIGHT 36
 
 @interface MSScrollView()<UIScrollViewDelegate>
 {
@@ -17,6 +20,7 @@
     CGFloat _dragEndX;
     CGFloat _dragOutStartX;
 }
+@property (nonatomic, strong) UIPageControl *innerPageControl;
 @end
 @implementation MSScrollView
 
@@ -30,6 +34,18 @@
     }
     
     return self;
+}
+
+- (void)setPageControl:(CGPoint)centerPoint
+{
+    if(!_innerPageControl)
+    {
+        self.innerPageControl = [[UIPageControl alloc] initWithFrame:(CGRect){0,0,PAGE_CONTROL_WIDTH,PAGE_CONTROL_HEIGHT}];
+        [self.superview addSubview:_innerPageControl];
+        _innerPageControl.numberOfPages = self.contentSize.width / self.frame.size.width;
+    }
+    
+    _innerPageControl.center = centerPoint;    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -104,6 +120,13 @@
                 }
             }
         }
+    }
+    
+    if(_innerPageControl)
+    {
+        CGFloat pageWidth = scrollView.frame.size.width;
+        float fractionalPage = scrollView.contentOffset.x / pageWidth;
+        _innerPageControl.currentPage = lround(fractionalPage);
     }
 }
 
