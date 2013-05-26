@@ -133,5 +133,6 @@ typedef void (^ScrollViewDidEndDecelerating) ();
 @property (nonatomic, copy) ScrollViewDidEndDragging endDragging;
 @property (nonatomic, copy) ScrollViewWillBeginDecelerating beginDecelerating;
 @property (nonatomic, copy) ScrollViewDidEndDecelerating endDecelerating;
+- (void)setPageControl:(CGPoint)centerPoint;
 @end
 
