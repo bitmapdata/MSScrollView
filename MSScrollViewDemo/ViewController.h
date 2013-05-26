@@ -2,8 +2,8 @@
 //  ViewController.h
 //  MSScrollViewDemo
 //
-//  Created by Shim Minseok on 13. 1. 14..
-//  Copyright (c) 2013 www.gconic.com All rights reserved.
+//  Created by Shim Minseok on 13. 5. 26..
+//  Copyright (c) 2013 Shim Minseok All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
