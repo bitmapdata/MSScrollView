@@ -5,7 +5,7 @@ A block-based UIScrollView alternative which runs a handler block when scrolling
 
 ## Installation ##
 
-Drag the included MSTranslateVendor folder into your project.
+Drag the included MSScrollView folder into your project.
 
 ## Usage ##
 
