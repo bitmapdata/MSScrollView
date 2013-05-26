@@ -1,7 +1,10 @@
 MSScrollView
 ============
 
-A block-based UIScrollView alternative which runs a handler block when scrolling, instead of using delegation. also notify the direction of the scroll and miscellaneous state
+A block-based UIScrollView alternative which runs a handler block when scrolling, instead of using delegation. also notify the below information. 
+know when using a didScroll block.
+* **Direction (left, right)**  
+* **Action (go through, bounce back)**
 
 ## Installation ##
 
@@ -11,7 +14,7 @@ Drag the included MSScrollView folder into your project.
 
 Information on MSScrollView refer to the header file.
 
-These classes was written under the ARC. Be sure to specify -fobjc-arc the 'Compile Sources' Build Phase for each file if you aren't using ARC project-wide
+These classes was written under the ARC. Be sure to specify `-fobjc-arc` the 'Compile Sources' Build Phase for each file if you aren't using ARC project-wide
 
 ## Sample Code ##
 
