@@ -2,18 +2,36 @@ MSScrollView
 ============
 
 A block-based UIScrollView alternative which runs a handler block when scrolling, instead of using delegation. also notify the below information. 
-know when using a didScroll block. And using a setPageControl methods UIPageControl that are automatically connected.
+know when using a didScroll block.
 
-**Information**
+<p align="center" >
+<img src="https://raw.github.com/bitmapdata/MSScrollView/master/Resources/ScreenShot1.png">
+</p>
 
-* **Direction**  
-   - HORIZONTAL_MODE (left, right)  
-   - VERTICAL_MODE   (up, down)  
-* **Action (go through, bounce back)**
+* **ScrollView Direction**  
 
-**Options**
+ **`HORIZONTAL_MODE`**  
+     - LEFT_SCROLLING  
+     - RIGHT_SCROLLING  
 
-* **Embedded PageControl (currentPage, numberOfPages automatically update)**
+ **`VERTICAL_MODE`**
+     - UP_SCROLLING  
+     - DOWN_SCROLLING  
+
+* **ScrollView Action**  
+
+ **`Dragging`**  
+     - UNKNOWN_ACTION
+     
+ **`After Drag`**    
+     - GO_THROUGH
+     - GO_THROUGH_COMPLETE
+     - BOUNCES_BACK
+     - BOUNCES_BACK_COMPLETE
+     
+* **Options**  
+
+  \- Embedded PageControl (currentPage, numberOfPages automatically update)
 
 ## Installation ##
 
