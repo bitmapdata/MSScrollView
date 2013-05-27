@@ -10,11 +10,11 @@ know when using a didScroll block.
 
 * **ScrollView Direction**  
 
- **`HORIZONTAL_MODE`**  
+ **`HORIZONTAL_SCROLL_MODE`**  
      - LEFT_SCROLLING  
      - RIGHT_SCROLLING  
 
- **`VERTICAL_MODE`**
+ **`VERTICAL_SCROLL_MODE`**
      - UP_SCROLLING  
      - DOWN_SCROLLING  
 
@@ -31,15 +31,15 @@ know when using a didScroll block.
      
 * **Options**  
 
-  \- Embedded PageControl (currentPage, numberOfPages automatically update)
+  \- Embedded PageControl (currentPage, numberOfPages automatically update.)
+
+More Information on MSScrollView refer to the header file.
 
 ## Installation ##
 
 Drag the included MSScrollView folder into your project.
 
 ## Usage ##
-
-Information on MSScrollView refer to the header file.
 
 These classes was written under the ARC. Be sure to specify `-fobjc-arc` the 'Compile Sources' Build Phase for each file if you aren't using ARC project-wide
 
