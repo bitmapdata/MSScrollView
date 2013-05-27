@@ -46,18 +46,26 @@ typedef enum
 
 typedef enum
 {
-    LEFT_SCROLLING,
-    RIGHT_SCROLLING,
+    LEFT_SCROLLING      = 1,
+    RIGHT_SCROLLING     = 2,
+    UP_SCROLLING        = 3,
+    DOWN_SCROLLING      = 4
 }ScrollViewDirection;
 
 typedef enum
 {
-    GO_THROUGH,
-    GO_THROUGH_COMPLETE,
-    BOUNCE_BACK,
-    BOUNCE_BACK_COMPLETE,
-    UNKNOWN_ACTION
+    GO_THROUGH              = 1,
+    GO_THROUGH_COMPLETE     = 2,
+    BOUNCE_BACK             = 3,
+    BOUNCE_BACK_COMPLETE    = 4,
+    UNKNOWN_ACTION          = 100
 }ScrollViewAction;
+
+typedef enum
+{
+    HORIZONTAL_SCROLL_MODE,
+    VERTICAL_SCROLL_MODE
+}ScrollViewMode;
 
 /**
  *  @block-function  ScrollViewDidScroll
@@ -73,19 +81,20 @@ typedef enum
  *                   direction
  *                     - a ScrollViewDirection show a below image
  *
- *                                 LEFT_SCROLLING
- *                                |             |
- *                                |             |
- *                                |   <=======  |
- *                                |             |
- *                                |             |
  *
- *                                RIGHT_SCROLLING
- *                                |             |
- *                                |             |
- *                                |  =======>   |
- *                                |             |
- *                                |             |
+ *                                 LEFT_SCROLLING      UP_SCROLLING
+ *                                |             |      |           |
+ *                                |             |      |     ^     |
+ *                                |   <=======  |      |     |     |
+ *                                |             |      |     |     |
+ *                                |             |      |     |     |
+ *
+ *                                RIGHT_SCROLLING      DOWN_SCROLLING
+ *                                |             |      |           |
+ *                                |             |      |     |     |
+ *                                |  =======>   |      |     |     |
+ *                                |             |      |     |     |
+ *                                |             |      |     V     |
  *
  *                   action
  *                     - During dragging the scroll view always return UNKNOWN_ACTION. 
@@ -133,6 +142,18 @@ typedef void (^ScrollViewDidEndDecelerating) ();
 @property (nonatomic, copy) ScrollViewDidEndDragging endDragging;
 @property (nonatomic, copy) ScrollViewWillBeginDecelerating beginDecelerating;
 @property (nonatomic, copy) ScrollViewDidEndDecelerating endDecelerating;
+@property (nonatomic, assign) ScrollViewMode mode;
+
+/**
+ *  @function        setPageControl:(CGPoint)centerPoint
+ *
+ *  @abstract        This method perform link the UIPageControl to MSScrollView.
+ *
+ *  @note            UIPageControl will be added at the superview of the MSScrollView.
+ *
+ *  @parmas          centerPoint
+ *                     - UIPageControl set center point.
+ */
 - (void)setPageControl:(CGPoint)centerPoint;
 @end
 
