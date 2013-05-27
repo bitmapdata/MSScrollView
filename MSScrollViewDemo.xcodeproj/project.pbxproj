@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A509D3D17533F9B00996E37 /* ScreenShot1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A509D3C17533F9B00996E37 /* ScreenShot1.png */; };
 		EE4088711751A4DC004FF27A /* MSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40886E1751A4DC004FF27A /* MSScrollView.m */; };
 		EE8AB5FF16A4392D00938ED4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8AB5FE16A4392D00938ED4 /* UIKit.framework */; };
 		EE8AB60116A4392D00938ED4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8AB60016A4392D00938ED4 /* Foundation.framework */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A509D3C17533F9B00996E37 /* ScreenShot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot1.png; sourceTree = "<group>"; };
 		EE40886D1751A4DC004FF27A /* MSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSScrollView.h; sourceTree = "<group>"; };
 		EE40886E1751A4DC004FF27A /* MSScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSScrollView.m; sourceTree = "<group>"; };
 		EE8AB5FA16A4392D00938ED4 /* MSScrollViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSScrollViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A509D3B17533F9100996E37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A509D3C17533F9B00996E37 /* ScreenShot1.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		EE40886C1751A4DC004FF27A /* MSScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 			children = (
 				EE40886C1751A4DC004FF27A /* MSScrollView */,
 				EE8AB60416A4392D00938ED4 /* MSScrollViewDemo */,
+				3A509D3B17533F9100996E37 /* Resources */,
 				EE8AB5FD16A4392D00938ED4 /* Frameworks */,
 				EE8AB5FB16A4392D00938ED4 /* Products */,
 			);
@@ -176,6 +187,7 @@
 				EE8AB61316A4392E00938ED4 /* Default@2x.png in Resources */,
 				EE8AB61516A4392E00938ED4 /* Default-568h@2x.png in Resources */,
 				EE8AB61816A4392E00938ED4 /* MainStoryboard.storyboard in Resources */,
+				3A509D3D17533F9B00996E37 /* ScreenShot1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
