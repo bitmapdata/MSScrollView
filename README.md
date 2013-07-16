@@ -1,6 +1,9 @@
 MSScrollView
 ============
 
+[![Version](http://cocoapod-badges.herokuapp.com/v/MSScrollView/badge.png)](http://cocoapod-badges.herokuapp.com/v/MSScrollView/badge.png)
+[![Platform](http://cocoapod-badges.herokuapp.com/p/MSScrollView/badge.png)](http://cocoapod-badges.herokuapp.com/p/MSScrollView/badge.png)
+
 A block-based UIScrollView alternative which runs a handler block when scrolling, instead of using delegation. also notify the below information. 
 know when using a didScroll block.
 
@@ -10,7 +13,7 @@ know when using a didScroll block.
 
 * **ScrollView Direction**  
 
- **`HORIZONTAL_SCROLL_MODE`**  
+ **`HORIZONTAL_SCROLL_MODE`**
      - LEFT_SCROLLING  
      - RIGHT_SCROLLING  
 
@@ -19,6 +22,8 @@ know when using a didScroll block.
      - DOWN_SCROLLING  
 
 * **ScrollView Action**  
+
+    During dragging(when user finger touch in screen) the scroll view always return UNKNOWN_ACTION. After dragging(user finger touch out screen, begin decelerating) there are two kinds of behavior are expected. Just moving go through direction, or bounce back to the original position.
 
  **`Dragging`**  
      - UNKNOWN_ACTION
