@@ -42,7 +42,12 @@ More Information on MSScrollView refer to the header file.
 
 ## Installation ##
 
-Drag the included MSScrollView folder into your project.
+MSScrollView is possible via CocoaPods. Just add the following to your Podfile.
+
+    platform :ios
+    pod 'MSScrollView'
+
+Another way to, drag the included <b>MSScrollView</b> folder into your project.
 
 ## Usage ##
 
